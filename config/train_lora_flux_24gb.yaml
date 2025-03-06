@@ -2,7 +2,7 @@
 job: extension
 config:
   # this name will be the folder and filename name
-  name: "ban_chi_hai_1_flux_lora_v1"
+  name: "ban_chi_hai_2_flux_lora_v1"
   process:
     - type: 'sd_trainer'
       # root folder to save training sessions/samples/weights
@@ -31,7 +31,7 @@ config:
         # images will automatically be resized and bucketed into the resolution specified
         # on windows, escape back slashes with another backslash so
         # "C:\\path\\to\\images\\folder"
-        - folder_path: "/root/ai-toolkit/dataset/ban_chi_hai_1"
+        - folder_path: "/root/ai-toolkit/dataset/ban_chi_hai_2"
           caption_ext: "txt"
           caption_dropout_rate: 0.05  # will drop out the caption 5% of time
           shuffle_tokens: false  # shuffle caption order, split by commas
@@ -75,7 +75,7 @@ config:
         prompts:
           # you can add [trigger] to the prompts here and it will be replaced with the trigger word
 #          - "[trigger] holding a sign that says 'I LOVE PROMPTS!'"\
-          - "Tok is sitting on his bed"
+          - "Tok is wearing a white shirt"
         neg: ""  # not used on flux
         seed: 42
         walk_seed: true
